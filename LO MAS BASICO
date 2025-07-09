@@ -1,0 +1,21 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+    res.setHeader('Content-Type', 'text/plain'); // Corregido: Content-Type con guion
+    res.write('\n'); // Asegúrate de que sea un salto de línea
+    res.write('Diocles Bacusoy\n'); // Espacios añadidos para mejor lectura y \n al final
+    res.write('Adonis Mero\n'); //
+    res.write('-------------------\n'); // Añadido \n
+    res.write('Sistemas Operativos\n'); // Añadido \n
+    res.write('\n'); // Asegúrate de que sea un salto de línea
+    res.write('Grupo 3\n'); // Añadido \n
+    res.write('\n'); // Asegúrate de que sea un salto de línea
+    res.write('Pag mas basica\n'); // Añadido \n
+    res.end();
+});
+
+app.listen(port, () => {
+    console.log(`Servidor escuchando en http://localhost:${port}`); // Mensaje para saber cuándo el servidor está listo
+});
